@@ -76,19 +76,15 @@
 									图片压缩
 								</a>
 							</li>
-							<li>
-								<a href="http://love.wawacm.com" data-slide="contact">
-									表白制作
-								</a>
-							</li>
+
 							<li>
 								<a href="https://randompass.wawacm.com/" data-slide="contact">
 									随机密码
 								</a>
 							</li>
 							<li>
-								<a href="http://os.wawacm.com/" data-slide="contact">
-									境内线路
+								<a href="http://about.wawacm.com/" data-slide="contact">
+									关于我们
 								</a>
 							</li>
 							<li>
@@ -111,7 +107,16 @@
 									微信生成
 								</a>
 							</li>
-
+							<li>
+								<a href="http://monitor.wawacm.com/" data-slide="contact">
+									网站状态
+								</a>
+							</li>
+														<li>
+								<a href="https://speed.wawacm.com/" data-slide="contact">
+									网络测速
+								</a>
+							</li>
 						</ul>
 						<!-- END NAVIGATION MENU ITEMS -->
 					</div>
@@ -129,8 +134,8 @@
 						<a class="landing-button " target="_blank" href="https://blog.wxl.pw/">
 							官方博客
 						</a>
-						<a class="landing-button " target="_blank" href="https://about.wawacm.com/">
-							关于我们
+						<a class="landing-button " target="_blank" href="https://os.wawacm.com/">
+							境内官网
 						</a>
 						<a class="landing-button " target="_blank" href="https://security.wawacm.com/">
 							应急响应
@@ -216,7 +221,7 @@
 								官方Q群
 							</a>
 						</li>
-						<li title="兴趣部落">
+						<li title="网易云">
 							<a href="https://y.music.163.com/m/artist?app_version=8.8.30&id=51163153&userid=6428210353&dlt=0846">
 								<i class="fa fa-code">
 								</i>
@@ -252,47 +257,49 @@
 			</script>
 			<script src="https://cdn.jsdelivr.net/gh/wawacm/wwwyava/static/js/sj.js">
 			</script>
-			<script>
-				var chakhsu = function(r) {
-    function t() {
-        return b[Math.floor(Math.random() * b.length)]
-    }
+<script>
+var wawacm = function(r) {
+  // 定义了几个辅助函数和变量
+  function t() {
+      return b[Math.floor(Math.random() * b.length)]
+  }
+  function e() {
+      return String.fromCharCode(94 * Math.random() + 33)
+  }
+  function n(r) {
+      for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+      }
+      return n
+  }
+  function i() {
+      var t = o[c.skillI];
+      c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+  }
 
-    function e() {
-        return String.fromCharCode(94 * Math.random() + 33)
-    }
-
-    function n(r) {
-        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-            var l = document.createElement("span");
-            l.textContent = e(), l.style.color = t(), n.appendChild(l)
-        }
-        return n
-    }
-
-    function i() {
-        var t = o[c.skillI];
-        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-    }
-    var l = ""
-    o = ["Hi,您好", "欢迎您来到", "娃娃团队官网"].map(function(r) {
-            return r + ""
-        }), a = 2, g = 1, s = 5, d = 75,
-        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-        c = {
-            text: "",
-            prefixP: -s,
-            skillI: 0,
-            skillP: 0,
-            direction: "forward",
-            delay: a,
-            step: g
-        };
-    i()
+  var l = "";
+  o = ["Hi,您好", "欢迎您来到", "娃娃团队官网"].map(function(r) {
+          return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 75,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+          text: "",
+          prefixP: -s,
+          skillI: 0,
+          skillP: 0,
+          direction: "forward",
+          delay: a,
+          step: g
+      };
+  i();
 };
-chakhsu(document.getElementById('chakhsu'));
-			</script>
-			<!-- 爱心-->
+wawacm(document.getElementById('wawacm'));
+</script>
 	</body>
 
 </html>
